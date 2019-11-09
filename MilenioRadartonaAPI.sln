@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilenioRadartonaAPI", "MilenioRadartonaAPI\MilenioRadartonaAPI.csproj", "{613EE45B-9155-4D27-8305-8B29A99FD051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613EE45B-9155-4D27-8305-8B29A99FD051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613EE45B-9155-4D27-8305-8B29A99FD051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613EE45B-9155-4D27-8305-8B29A99FD051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613EE45B-9155-4D27-8305-8B29A99FD051}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {079E1B49-A11B-406A-8A0C-FB5F8FA5E936}
+	EndGlobalSection
+EndGlobal
