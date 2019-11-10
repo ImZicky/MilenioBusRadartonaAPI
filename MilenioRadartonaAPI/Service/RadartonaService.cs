@@ -10,12 +10,12 @@ namespace Service
 {
     public interface IRadartonaService
     {
-        Task<DesastreRelatorio> GetDesastre(string lat, string lon, DateTime dia, string raio);
-        Task<AcidenteRelatorio> GetAcidente(string lat, string lon, DateTime dia, string raio);
-        Task<TransitoRelatorio> GetTransito(string lat, string lon, DateTime dia, string raio);
-        Task<ChuvaRelatorio> GetChuva(string lat, string lon, DateTime dia, string raio);
-        Task<ImprudenciaRelatorio> GetImprudencia(string lat, string lon, DateTime dia, string raio);
-        Task<AnormalidadeRelatorio> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio);
+        Task<List<DesastreRelatorio>> GetDesastre(string lat, string lon, DateTime dia, string raio);
+        Task<List<AcidenteRelatorio>> GetAcidente(string lat, string lon, DateTime dia, string raio);
+        Task<List<TransitoRelatorio>> GetTransito(string lat, string lon, DateTime dia, string raio);
+        Task<List<ChuvaRelatorio>> GetChuva(string lat, string lon, DateTime dia, string raio);
+        Task<List<ImprudenciaRelatorio>> GetImprudencia(string lat, string lon, DateTime dia, string raio);
+        Task<List<AnormalidadeRelatorio>> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio);
     }
 
     public class RadartonaService : IRadartonaService
@@ -29,7 +29,7 @@ namespace Service
         }
 
 
-        public async Task<AcidenteRelatorio> GetAcidente(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<AcidenteRelatorio>> GetAcidente(string lat, string lon, DateTime dia, string raio)
         {
             var retorno = await _rep.GetAcidente(lat, lon, dia, raio);
             /* ver como que vai ter que transformar os dados pra criar um relatorio desse tipo */
@@ -38,7 +38,7 @@ namespace Service
         }
 
 
-        public async Task<ChuvaRelatorio> GetChuva(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<ChuvaRelatorio>> GetChuva(string lat, string lon, DateTime dia, string raio)
         {
             var retorno = await _rep.GetChuva(lat, lon, dia, raio);
             /* ver como que vai ter que transformar os dados pra criar um relatorio desse tipo */
@@ -47,7 +47,7 @@ namespace Service
         }
 
 
-        public async Task<DesastreRelatorio> GetDesastre(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<DesastreRelatorio>> GetDesastre(string lat, string lon, DateTime dia, string raio)
         {
             var retorno = await _rep.GetDesastre(lat, lon, dia, raio);
             /* ver como que vai ter que transformar os dados pra criar um relatorio desse tipo */
@@ -56,7 +56,7 @@ namespace Service
         }
 
 
-        public async Task<ImprudenciaRelatorio> GetImprudencia(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<ImprudenciaRelatorio>> GetImprudencia(string lat, string lon, DateTime dia, string raio)
         {
             var retorno = await _rep.GetImprudencia(lat, lon, dia, raio);
             /* ver como que vai ter que transformar os dados pra criar um relatorio desse tipo */
@@ -64,12 +64,12 @@ namespace Service
             return retorno;
         }
 
-        public Task<AnormalidadeRelatorio> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio)
+        public Task<List<AnormalidadeRelatorio>> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<TransitoRelatorio> GetTransito(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<TransitoRelatorio>> GetTransito(string lat, string lon, DateTime dia, string raio)
         {
             var retorno = await _rep.GetTransito(lat, lon, dia, raio);
             /* ver como que vai ter que transformar os dados pra criar um relatorio desse tipo */

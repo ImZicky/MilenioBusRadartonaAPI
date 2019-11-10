@@ -12,17 +12,20 @@ namespace MilenioRadartonaAPI.Controllers
 {
     public class RadartonaController : Controller
     {
+       
         /*service*/
         private readonly IRadartonaService _serv;
+
 
         public RadartonaController(IRadartonaService serv)
         {
             _serv = serv;
         }
 
+
         [HttpGet]
         [Route("/v1/GetPrazoLongo/{lat}/{lon}/{inicio}/{fim}/{raio}")]
-        public Task<AnormalidadeRelatorio> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio)
+        public Task<List<AnormalidadeRelatorio>> GetPrazoLongo(double lat, double lon, DateTime inicio, DateTime fim, double raio)
         {
             if (lat != 0 && lon != 0 && fim != null && inicio != null && raio != 0)
             {
@@ -51,7 +54,7 @@ namespace MilenioRadartonaAPI.Controllers
 
         [HttpGet]
         [Route("/v1/GetPrazoCurto/GetDesastre/{lat}/{lon}/{dia}/{raio}")]
-        public async Task<DesastreRelatorio> GetDesastre(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<DesastreRelatorio>> GetDesastre(string lat, string lon, DateTime dia, string raio)
         {
 
             return await _serv.GetDesastre(lat, lon, dia, raio);
@@ -61,7 +64,7 @@ namespace MilenioRadartonaAPI.Controllers
 
         [HttpGet]
         [Route("/v1/GetPrazoCurto/GetAcidente/{lat}/{lon}/{dia}/{raio}")]
-        public async Task<AcidenteRelatorio> GetAcidente(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<AcidenteRelatorio>> GetAcidente(string lat, string lon, DateTime dia, string raio)
         {
 
             return await _serv.GetAcidente(lat, lon, dia, raio);
@@ -70,7 +73,7 @@ namespace MilenioRadartonaAPI.Controllers
 
         [HttpGet]
         [Route("/v1/GetPrazoCurto/GetTransito/{lat}/{lon}/{dia}/{raio}")]
-        public async Task<TransitoRelatorio> GetTransito(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<TransitoRelatorio>> GetTransito(string lat, string lon, DateTime dia, string raio)
         {
 
             return await _serv.GetTransito(lat, lon, dia, raio);
@@ -78,7 +81,7 @@ namespace MilenioRadartonaAPI.Controllers
 
         [HttpGet]
         [Route("/v1/GetPrazoCurto/GetChuva/{lat}/{lon}/{dia}/{raio}")]
-        public async Task<ChuvaRelatorio> GetChuva(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<ChuvaRelatorio>> GetChuva(string lat, string lon, DateTime dia, string raio)
         {
 
             return await _serv.GetChuva(lat, lon, dia, raio);
@@ -86,7 +89,7 @@ namespace MilenioRadartonaAPI.Controllers
 
         [HttpGet]
         [Route("/v1/GetPrazoCurto/GetImprudencia/{lat}/{lon}/{dia}/{raio}")]
-        public async Task<ImprudenciaRelatorio> GetImprudencia(string lat, string lon, DateTime dia, string raio)
+        public async Task<List<ImprudenciaRelatorio>> GetImprudencia(string lat, string lon, DateTime dia, string raio)
         {
 
             return await _serv.GetImprudencia(lat, lon, dia, raio);

@@ -2686,6 +2686,17 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Win32.Primitives/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        }
+      },
       "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -2707,6 +2718,23 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "MongoDB.Bson/2.9.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Diagnostics.Process": "4.1.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.5/MongoDB.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Bson.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -3047,7 +3075,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.NonGeneric.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
@@ -3172,6 +3200,49 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.Process/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.Win32.Primitives": "4.0.1",
+          "Microsoft.Win32.Registry": "4.0.0",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Threading.Thread": "4.0.0",
+          "System.Threading.ThreadPool": "4.0.10",
+          "runtime.native.System": "4.0.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -3642,7 +3713,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -3802,6 +3873,22 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Formatters/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll": {}
         }
       },
       "System.Runtime.Serialization.Primitives/4.3.0": {
@@ -4285,6 +4372,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
+        }
+      },
+      "System.Threading.ThreadPool/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Handles": "4.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -7167,6 +7267,43 @@
         "version.txt"
       ]
     },
+    "Microsoft.Win32.Primitives/4.0.1": {
+      "sha512": "fQnBHO9DgcmkC9dYSJoBqo6sH1VJwJprUHh8F3hbcRlxiQiBUuTntdk8tUwV490OqC2kQUrinGwZyQHTieuXRA==",
+      "type": "package",
+      "path": "microsoft.win32.primitives/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/Microsoft.Win32.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.win32.primitives.4.0.1.nupkg.sha512",
+        "microsoft.win32.primitives.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
+    },
     "Microsoft.Win32.Registry/4.5.0": {
       "sha512": "+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "type": "package",
@@ -7205,6 +7342,22 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MongoDB.Bson/2.9.3": {
+      "sha512": "iuLdgI/8Q3AnboPR0OTFDpqVAxTskW9IQLhxKt+O4IQ3s9hHVLLp1dGLChrwrcK+3Fa2MFNHvm6W8tEMV4VUmw==",
+      "type": "package",
+      "path": "mongodb.bson/2.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net452/MongoDB.Bson.dll",
+        "lib/net452/MongoDB.Bson.xml",
+        "lib/netstandard1.5/MongoDB.Bson.dll",
+        "lib/netstandard1.5/MongoDB.Bson.xml",
+        "mongodb.bson.2.9.3.nupkg.sha512",
+        "mongodb.bson.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -8378,6 +8531,63 @@
         "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll",
         "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512",
         "system.diagnostics.fileversioninfo.nuspec"
+      ]
+    },
+    "System.Diagnostics.Process/4.1.0": {
+      "sha512": "mpVZ5bnlSs3tTeJ6jYyDJEIa6tavhAd88lxq1zbYhkkCu0Pno2+gHXcvZcoygq2d8JxW3gojXqNJMTAshduqZA==",
+      "type": "package",
+      "path": "system.diagnostics.process/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.Process.dll",
+        "lib/net461/System.Diagnostics.Process.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.Process.dll",
+        "ref/net461/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/System.Diagnostics.Process.dll",
+        "ref/netstandard1.4/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hant/System.Diagnostics.Process.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net461/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.diagnostics.process.4.1.0.nupkg.sha512",
+        "system.diagnostics.process.nuspec"
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
@@ -10481,6 +10691,34 @@
         "system.runtime.numerics.nuspec"
       ]
     },
+    "System.Runtime.Serialization.Formatters/4.3.0": {
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "type": "package",
+      "path": "system.runtime.serialization.formatters/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Runtime.Serialization.Formatters.dll",
+        "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Runtime.Serialization.Formatters.dll",
+        "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.formatters.nuspec"
+      ]
+    },
     "System.Runtime.Serialization.Primitives/4.3.0": {
       "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
@@ -11728,6 +11966,46 @@
         "system.threading.thread.nuspec"
       ]
     },
+    "System.Threading.ThreadPool/4.0.10": {
+      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
+      "type": "package",
+      "path": "system.threading.threadpool/4.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Threading.ThreadPool.dll",
+        "lib/netcore50/_._",
+        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.threadpool.4.0.10.nupkg.sha512",
+        "system.threading.threadpool.nuspec"
+      ]
+    },
     "System.ValueTuple/4.3.0": {
       "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
       "type": "package",
@@ -12073,7 +12351,8 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "MongoDB.Bson >= 2.9.3"
     ]
   },
   "packageFolders": {
@@ -12133,6 +12412,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[2.9.3, )"
           }
         },
         "imports": [
