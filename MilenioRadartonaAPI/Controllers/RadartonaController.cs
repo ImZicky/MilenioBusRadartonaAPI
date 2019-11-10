@@ -12,7 +12,7 @@ namespace MilenioRadartonaAPI.Controllers
 {
     public class RadartonaController : Controller
     {
-
+        /*service*/
         private readonly IRadartonaService _serv;
 
         public RadartonaController(IRadartonaService serv)
@@ -29,7 +29,7 @@ namespace MilenioRadartonaAPI.Controllers
                 return _serv.GetPrazoLongo(lat, lon, inicio, fim, raio);
             }
 
-            return StatusCode(500);
+            return null;
         }
 
 
@@ -45,7 +45,7 @@ namespace MilenioRadartonaAPI.Controllers
                 return LocalRedirect(url);
             }
 
-            return StatusCode(500);
+            return null;
         }
 
 
